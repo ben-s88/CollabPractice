@@ -4,14 +4,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     int speed = 7;
-    GameObject currentDuck;
-    Ray ray;
-    [SerializeField]
-    GameObject duck1;
-    [SerializeField]
-    GameObject duck2;
-    [SerializeField]
-    GameObject duck3;
+    GameObject currentDuck; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
