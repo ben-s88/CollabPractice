@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finham Brook | Kenilworth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Finham<span>Brook</span></div>
+            <div class="links">
+                <a href="#projects" class="nav-item active">Projects</a>
+                <a href="#history" class="nav-item">History</a>
+                <a href="#ecology" class="nav-item">Ecology</a>
+                <a href="#flooding" class="nav-item">Flooding</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>The Heart of Kenilworth</h1>
+            <p>Preserving Finham Brook for generations to come.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="projects" class="content active">
+            <div class="split">
+                <div class="text">
+                    <span class="label">Community</span>
+                    <h2>Current Projects</h2>
+                    <p>We are currently working on bank stabilization near the Abbey Ruins. Volunteers meet every second Saturday for "Brook Care" sessions.</p>
+                    <div class="card">
+                        <strong>Next Event:</strong> River Clean-up<br>
+                        Location: Abbey Fields Ford<br>
+                        Time: 10:00 AM
+                    </div>
+                </div>
+                <div class="visual">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800" alt="Environmental restoration">
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="content">
+            <div class="split reverse">
+                <div class="text">
+                    <span class="label">Heritage</span>
+                    <h2>A Medieval Legacy</h2>
+                    <p>Finham Brook once fed the defensive 'Great Mere' of Kenilworth Castle. After the Civil War in 1650, the mere was drained, leaving the lush valley we walk today.</p>
+                </div>
+                <div class="visual">
+                    <img src="https://images.unsplash.com/photo-1564415315949-7a0c4c73aab4?auto=format&fit=crop&q=80&w=800" alt="Castle ruins">
+                </div>
+            </div>
+        </section>
+
+        <section id="ecology" class="content">
+            <div class="split">
+                <div class="text">
+                    <span class="label">Nature</span>
+                    <h2>Ecological Sanctuary</h2>
+                    <p>The brook is a vital corridor for Kingfishers and Otters. We monitor invasive species like Himalayan Balsam to protect our native flora.</p>
+                </div>
+                <div class="visual">
+                    <img src="https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&q=80&w=800" alt="Kingfisher bird">
+                </div>
+            </div>
+        </section>
+
+        <section id="flooding" class="content">
+            <div class="split reverse">
+                <div class="text">
+                    <span class="label">Safety</span>
+                    <h2>Flood Mitigation</h2>
+                    <p>Finham Brook is prone to flash flooding. We implement "Leaky Dams" upstream to slow the flow and protect the town center.</p>
+                    <p class="alert">⚠️ Never attempt to drive through the Ford when water levels are high.</p>
+                </div>
+                <div class="visual">
+                    <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80&w=800" alt="Water stream">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const links = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.content');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('href').substring(1);
+                
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                sections.forEach(s => {
+                    s.classList.remove('active');
+                    if(s.id === target) s.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
