@@ -14,11 +14,6 @@ public class GameManager : MonoBehaviour
         uiManager = Canvas.GetComponent<UIManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        updateScore(1);
-    }
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
