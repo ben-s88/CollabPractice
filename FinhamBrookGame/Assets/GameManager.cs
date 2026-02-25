@@ -4,36 +4,30 @@ public class GameManager : MonoBehaviour
 {
     int score = 0;
     [SerializeField]
-    GameObject UIobj;
+    GameObject Canvas;
+    UIManager uiManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UIobj = GameObject.FindGameObjectWithTag("UI");
+        //Canvas = GameObject.FindGameObjectWithTag("Canvas");
 
-        if (UIobj != null)
-        {
-            Debug.Log("did not get ui");
-        }
+        uiManager = Canvas.GetComponent<UIManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        updateScore(1);
     }
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(UIobj);
+        DontDestroyOnLoad(Canvas);
     }
 
     public void updateScore(int s)
     {
         score += s;
-    }
-
-    void updateScoreUI()
-    {
-
+        uiManager.updateScoreLable(score);
     }
 }
