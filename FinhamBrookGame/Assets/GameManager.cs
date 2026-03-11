@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(Canvas);
+
+        foreach (GameObject GO in GameObject.FindGameObjectsWithTag("DDOL"))
+        {
+            DontDestroyOnLoad(GO);
+        }
     }
 
     public void updateScore(int s)
@@ -25,4 +30,5 @@ public class GameManager : MonoBehaviour
         score += s;
         uiManager.updateScoreLable(score);
     }
+
 }

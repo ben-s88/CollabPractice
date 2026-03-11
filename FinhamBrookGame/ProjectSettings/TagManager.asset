@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GameManager
   - DropArea
+  - Canvas
+  - DDOL
   layers:
   - Default
   - TransparentFX
