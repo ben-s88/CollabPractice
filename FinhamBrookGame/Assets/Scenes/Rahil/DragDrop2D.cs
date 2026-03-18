@@ -7,10 +7,14 @@ public class DragDrop2D : MonoBehaviour
     Collider2D _collider2D;
     public string destinationTag = "DropArea";
 
+    GameManager gameManager;
+
     void Start()
     {
         
         _collider2D = GetComponent<Collider2D>();
+
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void OnMouseDown()
@@ -34,6 +38,15 @@ public class DragDrop2D : MonoBehaviour
             if (hitInfo.transform.tag == destinationTag)
             {
                 transform.position = new Vector3(hitInfo.transform.position.x, hitInfo.transform.position.y + 0.7f, -1f);
+
+                if (gameManager != null)
+                {
+                    gameManager.updateScore(10);
+                }
+                else
+                {
+                    Debug.LogWarning("GameManager not found in the scene!");
+                }
             }
         }
 
