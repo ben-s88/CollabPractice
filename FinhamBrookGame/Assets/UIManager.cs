@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
 
     public void startButtonPress()
     {
-        SceneManager.LoadScene(1);
+        nextScene();
         mainMenuUI.SetActive(false);
     }
 
@@ -34,5 +34,10 @@ public class UIManager : MonoBehaviour
     public void updateScoreLable(int s)
     {
         text.text = s.ToString();
-    }    
+    }
+
+    public void nextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
