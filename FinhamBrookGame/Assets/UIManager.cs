@@ -38,6 +38,8 @@ public class UIManager : MonoBehaviour
 
     public void nextScene()
     {
+        mainMenuUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 }
