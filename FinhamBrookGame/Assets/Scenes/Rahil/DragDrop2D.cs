@@ -37,12 +37,11 @@ public class DragDrop2D : MonoBehaviour
         {
             if (hitInfo.transform.tag == destinationTag)
             {
-                transform.position = new Vector3(hitInfo.transform.position.x, hitInfo.transform.position.y, -1f);
+                transform.position = new Vector3(hitInfo.transform.position.x, hitInfo.transform.position.y + 0.7f, -1f);
 
                 if (gameManager != null)
                 {
                     gameManager.updateScore(10);
-                    Destroy(gameObject);
                 }
                 else
                 {

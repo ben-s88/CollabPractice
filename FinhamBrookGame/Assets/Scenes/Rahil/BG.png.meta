@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 6ef318f022b0a6843bc02390b86cdca9
+guid: b121f16e2cae1ae40bde00444d05a197
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 74410087901936253
-    second: "\u2014Pngtree\u2014trash bin icon_4398469 (1)_0"
-  - first:
-      213: -7183057876235680512
-    second: "\u2014Pngtree\u2014trash bin icon_4398469 (1)_1"
-  - first:
-      213: -6618819846779418865
-    second: "\u2014Pngtree\u2014trash bin icon_4398469 (1)_2"
+      213: -3924859794391656578
+    second: Gemini_Generated_Image_y5zzyyy5zzyyy5zz_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014trash bin icon_4398469 (1)_0"
+      name: Gemini_Generated_Image_y5zzyyy5zzyyy5zz_0
       rect:
         serializedVersion: 2
-        x: 523
-        y: 978
-        width: 154
-        height: 57
+        x: 0
+        y: 0
+        width: 1440
+        height: 2908
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7ab919a49b580100800000000000000
-      internalID: 74410087901936253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u2014Pngtree\u2014trash bin icon_4398469 (1)_1"
-      rect:
-        serializedVersion: 2
-        x: 277
-        y: 921
-        width: 646
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00586e54be6a05c90800000000000000
-      internalID: -7183057876235680512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u2014Pngtree\u2014trash bin icon_4398469 (1)_2"
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 164
-        width: 604
-        height: 741
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f074868da6a3524a0800000000000000
-      internalID: -6618819846779418865
+      spriteID: e779212dfc81889c0800000000000000
+      internalID: -3924859794391656578
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u2014Pngtree\u2014trash bin icon_4398469 (1)_0": 74410087901936253
-      "\u2014Pngtree\u2014trash bin icon_4398469 (1)_1": -7183057876235680512
-      "\u2014Pngtree\u2014trash bin icon_4398469 (1)_2": -6618819846779418865
+      Gemini_Generated_Image_y5zzyyy5zzyyy5zz_0: -3924859794391656578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
