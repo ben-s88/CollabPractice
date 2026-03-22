@@ -8,10 +8,6 @@ TagManager:
   - DropArea
   - Canvas
   - DDOL
-  - Circle1
-  - Circle2
-  - Circle3
-  - Circle4
   layers:
   - Default
   - TransparentFX
