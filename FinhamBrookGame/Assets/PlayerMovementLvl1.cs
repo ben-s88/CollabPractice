@@ -25,15 +25,16 @@ public class PlayerMovementLvl1 : MonoBehaviour
     {
 
     }
-    public void StartCRoutine(Vector3 pos, string tag)
+    public bool StartCRoutine(Vector3 pos, string tag)
     {
-        if (!minigame2Unloaded) { return; };
+        if (!minigame2Unloaded) { return false; };
         lastTag = tag;
         StartCoroutine(nameof(moveToPos), pos);
         foreach (GameObject go in GameObject.FindGameObjectsWithTag(tag))
         {
             go.GetComponent<BoxCollider2D>().enabled = false;
         }
+        return true;
     }
 
     public IEnumerator moveToPos(Vector3 pos)
