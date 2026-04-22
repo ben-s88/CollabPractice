@@ -10,14 +10,17 @@ public class PlayerMovementLvl1 : MonoBehaviour
     string lastTag;
     Camera camera;
     float cameraYDiff;
-    bool minigame2Unloaded = true;
+    public bool minigame2Loaded = false;
     VideoPlayer VP;
+    GameManager gameManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         camera = Camera.main;
         VP = GameObject.FindGameObjectWithTag("VPlayer").GetComponent<VideoPlayer>();
         cameraYDiff = math.abs(transform.position.y - camera.transform.position.y);
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gameManager.Lvl2Unload += sceneUnloaded;
     }
 
     // Update is called once per frame
@@ -27,7 +30,7 @@ public class PlayerMovementLvl1 : MonoBehaviour
     }
     public bool StartCRoutine(Vector3 pos, string tag)
     {
-        if (!minigame2Unloaded) { return false; };
+        if (minigame2Loaded) { return false; };
         lastTag = tag;
         StartCoroutine(nameof(moveToPos), pos);
         foreach (GameObject go in GameObject.FindGameObjectsWithTag(tag))
@@ -85,8 +88,8 @@ public class PlayerMovementLvl1 : MonoBehaviour
                     go.GetComponent<BoxCollider2D>().enabled = true;
                 }
                 SceneManager.LoadScene(2, LoadSceneMode.Additive);
-                minigame2Unloaded = false;
-                StartCoroutine(nameof(waitAndUnload));
+                Camera.main.transform.position = new Vector3(0, 0, -10);
+                minigame2Loaded = true;
                 break;
             case "Circle3":
                 foreach (GameObject go in GameObject.FindGameObjectsWithTag("Circle4"))
@@ -102,10 +105,11 @@ public class PlayerMovementLvl1 : MonoBehaviour
         lastTag = "";
     }
 
-    IEnumerator waitAndUnload()
+    
+    public void sceneUnloaded()
     {
-        yield return new WaitForSeconds(5);
-        SceneManager.UnloadSceneAsync(2);
-        minigame2Unloaded = true;
+        Debug.Log("registered unload");
+        minigame2Loaded = false;
     }
+
 }

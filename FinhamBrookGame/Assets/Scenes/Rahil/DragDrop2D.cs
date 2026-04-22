@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DragDrop2D : MonoBehaviour
 {
-    int trashCount = 0;
     Vector3 offset;
     Collider2D _collider2D;
     public string destinationTag = "DropArea";
@@ -41,14 +40,9 @@ public class DragDrop2D : MonoBehaviour
 
                 if (gameManager != null)
                 {
-                    trashCount++;
-                    gameManager.updateScore(10);
+                    gameManager.updateScore(10, true);
                     Destroy(gameObject);
 
-                    if (trashCount > 3)
-                    {
-                        //return
-                    }
                 }
                 else
                 {
