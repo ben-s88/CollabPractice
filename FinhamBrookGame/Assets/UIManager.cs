@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     TMP_Text text;
     [SerializeField]
     GameObject mainMenuUI;
+    [SerializeField]
+    GameObject howToPlayUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,13 +35,25 @@ public class UIManager : MonoBehaviour
 
     public void updateScoreLable(int s)
     {
-        text.text = s.ToString();
+        text.text = "Score: " + s.ToString();
     }
 
     public void nextScene()
     {
         mainMenuUI.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void howToPlay()
+    {
+        mainMenuUI.SetActive(false);
+        howToPlayUI.SetActive(true);
+    }
+
+    public void closeHowToPlay()
+    {
+        mainMenuUI.SetActive(true);
+        howToPlayUI.SetActive(false);
     }
 
 }

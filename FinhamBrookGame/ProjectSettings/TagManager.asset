@@ -12,6 +12,7 @@ TagManager:
   - Circle2
   - Circle3
   - Circle4
+  - VPlayer
   layers:
   - Default
   - TransparentFX
